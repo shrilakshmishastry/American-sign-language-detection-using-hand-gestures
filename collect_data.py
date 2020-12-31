@@ -12,15 +12,12 @@ if not os.path.exists("data"):
     os.mkdir("data/train/d")
     os.mkdir("data/train/e")
     os.mkdir("data/train/f")
-    os.mkdir("data/test/a")
-    os.mkdir("data/test/b")
-    os.mkdir("data/test/c")
-    os.mkdir("data/test/d")
-    os.mkdir("data/test/e")
-    os.mkdir("data/test/f")
-    os.makedirs("data")
-    os.makedirs("data/train")
-    os.makedirs("data/test")
+    os.mkdir("data/train/n")
+    os.mkdir("data/train/o")
+    os.mkdir("data/train/p")
+    os.mkdir("data/train/q")
+    os.mkdir("data/train/r")
+    os.mkdir("data/train/s")
     os.makedirs("data/train/t")
     os.makedirs("data/train/u")
     os.makedirs("data/train/v")
@@ -28,13 +25,6 @@ if not os.path.exists("data"):
     os.makedirs("data/train/x")
     os.makedirs("data/train/y")
     os.makedirs("data/train/z")
-    os.makedirs("data/test/t")
-    os.makedirs("data/test/u")
-    os.makedirs("data/test/v")
-    os.makedirs("data/test/w")
-    os.makedirs("data/test/x")
-    os.makedirs("data/test/y")
-    os.makedirs("data/test/z")
 
 # set the mode
 mode = "test"
@@ -51,6 +41,12 @@ while True:
         'd': len(os.listdir(directory + "/d")),
         'e': len(os.listdir(directory + "/e")),
         'f': len(os.listdir(directory + "/f")),
+        'n': len(os.listdir(directory + "/n")),
+        'o': len(os.listdir(directory + "/o")),
+        'p': len(os.listdir(directory + "/p")),
+        'q': len(os.listdir(directory + "/q")),
+        'r': len(os.listdir(directory + "/r")),
+        's': len(os.listdir(directory + "/s")),
         't': len(os.listdir(directory + "/t")),
         'u': len(os.listdir(directory + "/u")),
         'v': len(os.listdir(directory + "/v")),
@@ -68,6 +64,12 @@ while True:
     cv2.putText(frame, "D :" + str(count['d']), (10, 180), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
     cv2.putText(frame, "E :" + str(count['e']), (10, 200), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
     cv2.putText(frame, "F :" + str(count['f']), (10, 220), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
+    cv2.putText(frame, "N :" + str(count['n']), (10, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
+    cv2.putText(frame, "O :" + str(count['o']), (10, 140), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
+    cv2.putText(frame, "P :" + str(count['p']), (10, 160), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
+    cv2.putText(frame, "Q :" + str(count['q']), (10, 180), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
+    cv2.putText(frame, "R :" + str(count['r']), (10, 200), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
+    cv2.putText(frame, "S :" + str(count['s']), (10, 220), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
     cv2.putText(frame, "T : " + str(count['t']), (10, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
     cv2.putText(frame, "U : " + str(count['u']), (10, 140), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
     cv2.putText(frame, "V : " + str(count['v']), (10, 160), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 255), 1)
@@ -118,8 +120,26 @@ while True:
     if key & 0xff == ord('f'):
         cv2.imwrite(directory + 'f/' + str(count['f']) + '.jpg', roi)
 
+    if key & 0xff == ord('n'):
+        cv2.imwrite(directory + 'n/' + str(count['n']) + '.jpg', roi)
+
     if key & 0xFF == ord('t'):
         cv2.imwrite(directory + 't/' + str(count['t']) + '.jpg', roi)
+
+    if key & 0xff == ord('o'):
+        cv2.imwrite(directory + 'o/' + str(count['o']) + '.jpg', roi)
+
+    if key & 0xff == ord('p'):
+        cv2.imwrite(directory + 'p/' + str(count['p']) + '.jpg', roi)
+
+    if key & 0xff == ord('q'):
+        cv2.imwrite(directory + 'q/' + str(count['q']) + '.jpg', roi)
+
+    if key & 0xff == ord('r'):
+        cv2.imwrite(directory + 'r/' + str(count['r']) + '.jpg', roi)
+
+    if key & 0xff == ord('s'):
+        cv2.imwrite(directory + 's/' + str(count['s']) + '.jpg', roi)
 
     if key & 0xFF == ord('u'):
         cv2.imwrite(directory + 'u/' + str(count['u']) + '.jpg', roi)
